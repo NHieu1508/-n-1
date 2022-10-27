@@ -1,0 +1,340 @@
+<?php
+include ("Php/php.php");
+$p=new ptud();
+
+if(isset($_REQUEST['MaF0']))
+
+{
+	$MaF0=	$_REQUEST['MaF0'];
+	
+	
+}
+?> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- site metas -->
+        <title>Danh Sách Bệnh Nhân</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- owl css -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- responsive-->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- awesome fontfamily -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+         
+          <script>
+              $(document).ready(function()
+               { 
+                var tht=$("#txttht");
+                var tyc=$("#txttyc option:selected").val();
+                var sotyc=tyc.substr(0,1);
+                var edt=$("#edt");
+                if(tht>=sotyc)
+                {
+                    edt.html("yeu cau chon benh vien phu hop")
+                }
+                else
+                {
+
+                }
+                
+                return true;
+
+              })
+          </script>
+           <?php 
+echo "<script type='text/JavaScript'> 
+     (function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+     </script>";
+
+?>
+          <style>.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background-color: #75BF57;
+  min-width: 160px;
+  font-size:20px;
+  font-family:"Arial Black", Gadget, sans-serif;
+}
+.nav-dropdown a {
+          padding-left: 30px;
+		  text-align:center;
+		   border-bottom:1px solid #00000;
+        }
+
+.nav-dropdown a:hover {
+  background-color: #3e72a3;
+}</style>
+    </head>
+<body class="main-layout">
+    <div class="loader_bg">
+        <div class="loader"><img src="" alt="" /></div>
+    </div>
+
+    <div class="wrapper">
+        <!-- end loader -->
+
+        <div id="content">
+            <!-- header -->
+            <header>
+                <!-- header inner -->
+                <div class="head-top">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="email">
+                                    <a href="#"><img src="images/mail_icon.png" /> Email : boyte@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="logo">
+                                    <a href="index.html"><img src="images/logoo.png" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                                <div class="contact_nu">
+                                    <a href="#"> <img src="images/phone_icon.png" /> Contact : +04. 62732160</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg">
+                    <div class="container">
+                        <nav class="navigation navbar-expand-md  navbar-dark ">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                            <ul id="main_menu" class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+
+                                    <a class="nav-link" href="../Nhieu/Index_admin.php"><svg style="margin:0 0 0 40px" xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                        </svg>Trang chủ <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                
+                                    <a class="nav-link" href="../Nhieu/CapnhatF0.php"><svg style="margin:0 0 0 50px" xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                        </svg>Cập nhật thông tin F0</a>
+                                </li>
+                                
+                                        
+                                <li class="nav-item">
+                                    <a class="nav-link"><svg style="margin:0 0 0 40px" xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-clipboard2-data" viewBox="0 0 16 16">
+                        <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z"/>
+                        <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z"/>
+                        <path d="M10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 0-1 1v3a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Z"/>
+                        </svg>Thống kê<svg style="margin:0 0 0 3px; padding-top:5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg></a>
+                        <ul class="nav-dropdown">
+                        <li>
+                        <a style="  color: #ffffff; padding: 5px 0px 5px 0px;" href="../Thi/thongkef0.php">Thống kê F0</a>
+                        </li>
+                        <li>
+                        <a style="  color: #ffffff; padding: 5px 0px 5px 0px;" href="../Thi/QLf0benhvien.php">Quản lý F0 bệnh viện</a>
+                        </li>
+                        </ul>
+                                </li>
+                            
+
+                                <li class="nav-item">
+                                    <a class="nav-link"><svg style="margin:0 0 0 40px" xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>Lịch khám<svg style="margin:0 0 0 3px; padding-top:5px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                        </svg></a>
+                        <ul class="nav-dropdown">
+                        <li>
+                        <a style="  color: #ffffff; padding: 5px 0px 5px 0px;" href="../Nhieu/tracuulichkham.php">Tra cứu lịch khám</a>
+                        </li>
+                        <li>
+                        <a style="  color: #ffffff; padding: 5px 0px 5px 0px;" href="../QuocPhi/danhsachxacnhan.php">Danh sách lịch khám</a>
+                        </li>
+
+                        </ul>
+                                </li>
+                                <li class="nav-item">
+                                
+                                    <a class="nav-link" href="CapnhatF0.php"><svg style="margin:0 0 0 40px" xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                        </svg>Cấp tài khoản bệnh viện</a>
+                                </li>
+                                <div class="avatar">
+                        <!-- Avatar image -->
+                        <img src="images/anhdaidien.png" width="25" height="40" class="avatar__image" style="margin:15px 0 0 30px" />
+
+                        </div>
+
+
+
+
+
+
+                            
+                            </ul>
+                            
+                        </nav>
+                    </div>
+                </div>
+                <!-- end header inner -->
+            </header>
+            <!-- end header -->
+              
+            <!-- end slider section -->
+            <div id="about" class="about top_layer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 pppp">
+                            <div class="about_box">
+                                <div class="about_box_text">
+                                    <div class="title">
+                                       <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+                                        
+                                        <h1 align="center"><strong>Danh sách bệnh nhân yêu cầu chuyển</strong></h1> 
+                                        <p>
+                                          <?php  $p->Loaddanhsachyeucau("select * from phieuchuyenvien order by Maphieu asc");?>
+                                        </p>
+                                        <p>&nbsp;</p>
+                                      <p>&nbsp; </p>
+                                        <p>&nbsp;</p>
+                                  </div>
+                                   
+                                     
+                                            
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+           
+
+            
+
+            
+            <!-- footer -->
+            
+            
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <p>© 12 NguyenVanBao Phường 4 Quận Gò Vấp hân hạnh được đón tiếp bệnh nhân
+                                <br>Điện thoại: (028) 39 23 46 29
+                               <br>Nhom chịu trách nhiệm:Team Gì Cũng Được
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+ 
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function() {
+             $("#sidebar").mCustomScrollbar({
+                 theme: "minimal"
+             });
+ 
+             $('#dismiss, .overlay').on('click', function() {
+                 $('#sidebar').removeClass('active');
+                 $('.overlay').removeClass('active');
+             });
+ 
+             $('#sidebarCollapse').on('click', function() {
+                 $('#sidebar').addClass('active');
+                 $('.overlay').addClass('active');
+                 $('.collapse.in').toggleClass('in');
+                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+             });
+         });
+     </script>
+ 
+     <script>
+         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+         // Australia.
+         function initMap() {
+             var map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 11,
+                 center: {
+                     lat: 40.645037,
+                     lng: -73.880224
+                 },
+             });
+ 
+             var image = 'images/maps-and-flags.png';
+             var beachMarker = new google.maps.Marker({
+                 position: {
+                     lat: 40.645037,
+                     lng: -73.880224
+                 },
+                 map: map,
+                 icon: image
+             });
+         }
+     </script>
+     <!-- google map js -->
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+     <!-- end google map js -->
+</body>
+</html>
